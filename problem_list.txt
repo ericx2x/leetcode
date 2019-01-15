@@ -1,0 +1,2 @@
+1.) Done in JS, Good runtime, Well understood. Summary - had to find two indices in an array that added to a target number. This was done with brute force, and then with a hash table*
+2.) Not yet done, attempted in python because needed linked lists easily. Not well understood, Summary - have to work at this.
