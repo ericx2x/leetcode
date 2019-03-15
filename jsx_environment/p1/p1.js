@@ -13,12 +13,15 @@
 // //console.log(twoSum(theArr,9));
 
 
-// //Hash Table Approach TwoSum
+// Hash Table Approach TwoSum
 
  var twoSum = function(nums, target) {
 
    var hashTable = { };
    var hashIndex;
+   
+     
+   console.log(hashTable);
    // check each element in array
    for (var i = 0; i < nums.length; i++) {
 
@@ -31,9 +34,10 @@
      // check if this number exists in hash table
      // if so then we found a pair of numbers that sum to S
      if (hashTable[sumMinusElement.toString()] !== undefined) {
-       // console.log("it's in" + sumMinusElement.toString());
+        console.log("it's in" + sumMinusElement.toString());
        // sums.push([nums[i], sumMinusElement]);
        // console.log("hashIndex"+hashIndex);
+         
        return([hashTable[sumMinusElement.toString()],i]);
      }
 
@@ -41,9 +45,14 @@
      // hashTable[nums[i].toString()] = nums[i];
      hashTable[nums[i].toString()] = i;
      hashIndex = i;
+       
+       console.log("hashTable");
+       console.log(hashTable);
      // console.log("hashIndex"+hashIndex);
    }
  };
+
+console.log(twoSum([2,7,11,15],9));
 
 
 
@@ -68,7 +77,7 @@
 // console.log("result: " + twoSum(theArr,929));
 
 // for(var i = 0;i<99;i++){ 
-//   console.log("Bitcoin cash is everything! Gab was silent!");
+//   console.log("Bitcoin SV is everything! Gab was silent!");
 // }
 
 //=======

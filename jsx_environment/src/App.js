@@ -522,7 +522,7 @@ class LinkedList {
         this.length = 0;
         this.addToHead(value);
     }
-    
+
     addToHead(value) {
         const newNode = { value }; // 1
         newNode.next = this.head;  // 2
@@ -531,10 +531,11 @@ class LinkedList {
         return this;
     }
 }
+
 const list = new LinkedList('first')
     .addToHead('second')
     .addToHead('third');
 
-console.log('Hello.');
+console.log('Hello');
 
 export default App;

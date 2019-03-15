@@ -215,21 +215,21 @@ function ListNode(val) {
   this.val = val;
   this.next = null;
 }
-//
+
 var l1 = new ListNode(2);
 l1.next = new ListNode(4);
 l1.next.next = new ListNode(3);
 
-console.log(l1);
+//console.log(l1);
 
-var l2 = new ListNode(2);
-l2.next = new ListNode(4);
-l2.next.next = new ListNode(3);
+var l2 = new ListNode(5);
+l2.next = new ListNode(6);
+l2.next.next = new ListNode(4);
 
-console.log(l2);
+//console.log(l2);
 
+//Accidently found the solution and submitted it... This was NOT intentional. I did not actually learn from this one properly.. Must review thoroughly and when I understand I should delete.
 
-//Accidently found the solution and submitted it... This was NOT intentional. I did not actually learn from this one properly.. Must review thoroughly and when I understand I should delete
 //var addTwoNumbers = function(l1, l2) {
 //    const head = new ListNode(0);
 //    var point = head;
@@ -254,44 +254,52 @@ console.log(l2);
 //    return run(l1, l2, point)
 //};
 
-
-
 //Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 //Output: 7 -> 0 -> 8
-//Explanation: 342 + 465 = 807.
+//Explanation: 342 + 465 = 807
+
 //This is the more traditional solution offered by leetcode (Except the JS implementaiton):
+
 var addTwoNumbers = function(l1, l2) {
-    
+
     let sum = 0;
     let current = new ListNode(0);
     let result = current;
-    
+
     while(l1 || l2) {
-        
+
         if(l1) {
             sum += l1.val;
             l1 = l1.next;
         }
-        
+
         if(l2) {
             sum += l2.val;
             l2 = l2.next;
         }
 
-        console.log();  //TODO: finish making this console.log to better understand this problem.
+        console.log("sum");
+        console.log(sum);
+
+        console.log('current before ' + current.val);
+
         current.next = new ListNode(sum % 10);
         current = current.next;
-        
+
+        console.log('current after ' + current.val);
+
         sum = sum > 9 ? 1 : 0;
+
+        console.log("sum-carry");
+        console.log(sum);
     }
-    
+
     if(sum) {
         current.next = new ListNode(sum);
     }
-    
+
     return result.next;
 };
 
 
-addTwoNumbers(l1,l2);
-
+console.log(addTwoNumbers(l1,l2));
