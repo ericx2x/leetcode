@@ -3,7 +3,7 @@ public class trees {
     public static void main(String[] args) {
         Node myNode = new Node();
         Tree myTree = new Tree();
-        myNode.children = new Node[20];
+        myNode.children = new Node[0];
         System.out.println(myNode.children);
     }
 
