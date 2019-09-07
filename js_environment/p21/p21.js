@@ -4,6 +4,9 @@
  *     this.val = val;
  *     this.next = null;
  * }
+
+
+ I re-did this problem on 9-7-2019 but had difficulty. Didn't think to make a res and cur linked list and didn't understnad that cur was pointing to the same data store as res but res was keeping it's head the same as cur's head itterated thru the linked list.
  
  2->2->4
  1->3->4
