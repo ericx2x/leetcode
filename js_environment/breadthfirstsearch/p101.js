@@ -59,6 +59,7 @@ var isSymmetric = function(root) {
     const queue = []
     queue.push(root)
     
+    console.log('intial', queue);
     while (queue.length > 0) {
         var currentNode = queue[0];
 
@@ -68,8 +69,12 @@ var isSymmetric = function(root) {
         if (currentNode.right !== null) {
           queue.push(currentNode.right)
         }
+
+    console.log(queue);
         queue.shift()
     }
+
+    console.log('final', queue);
 };
 
 console.log(isSymmetric(root))
